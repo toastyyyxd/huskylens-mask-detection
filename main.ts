@@ -6,8 +6,8 @@ basic.forever(function () {
     const box = huskylens.readBox_ss(1, Content3.ID)
     const ms = control.millis()
     if (ms > lastMs+2500) {
-        pins.digitalWritePin(DigitalPin.P13, 0)
-        pins.digitalWritePin(DigitalPin.P14, 0)
+        pins.digitalWritePin(DigitalPin.P13, 0) // red led
+        pins.digitalWritePin(DigitalPin.P14, 0) // green led
     }
     if (box <= 0) return
     if (box % 2 != 0) {
